@@ -172,3 +172,4 @@ void writeLog(char** board, int size, int moveNumber, char player) {
     fprintf(file, "\n");
     fclose(file);
 }
+
