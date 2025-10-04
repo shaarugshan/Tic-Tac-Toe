@@ -1,20 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-#define MIN_SIZE 3
-#define MAX_SIZE 10
-
-// Function declarations
-char** initializeBoard(int size);
-void displayBoard(char** board, int size);
-void freeBoard(char** board, int size);
-int getMove(char** board, int size, char player);
-int getComputerMove(char** board, int size);
-int checkWin(char** board, int size, char player);
-int checkDraw(char** board, int size);
-void writeLog(char** board, int size, int moveNumber, char player);
+#include <time.h> // Required for random moves (Part 2)
+#include "tictactoe.h"
 
 int main() {
+    srand(time(NULL));
+     
     int size, mode;
 
     // Get board size
